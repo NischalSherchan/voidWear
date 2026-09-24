@@ -4,3 +4,7 @@ dist
 .turbo
 .env
 .env.local
+.agents/
+.claude/
+.windsurf/
+skills-lock.json

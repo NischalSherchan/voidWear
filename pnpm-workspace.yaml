@@ -7,9 +7,17 @@ onlyBuiltDependencies:
   - sharp
   - unrs-resolver
   - "@nestjs/core"
+  - msgpackr-extract
+  - workerd
+  - "@prisma/engines"
+  - prisma
 
 allowBuilds:
   esbuild: true
   sharp: true
   unrs-resolver: true
   "@nestjs/core": true
+  msgpackr-extract: true
+  workerd: true
+  "@prisma/engines": true
+  prisma: true

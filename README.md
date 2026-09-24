@@ -44,5 +44,4 @@ pnpm dev
 
 ## Documentation
 
-See [MONOREPO.md](./MONOREPO.md) for the architecture diagrams, tooling decisions, and roadmap.
 '@ | Set-Content README.md
