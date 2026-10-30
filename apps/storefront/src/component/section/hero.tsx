@@ -33,19 +33,20 @@ const Hero = () => {
       />
 
       {/* left: collections */}
-      <div className="absolute left-6 top-1/2 z-10 -translate-y-1/2 md:left-10">
-        <CollectionList items={data.collections} />
-      </div>
+   {/* left: collections */}
+<div className="absolute bottom-8 left-6 z-10 md:bottom-auto md:left-10 md:top-1/2 md:-translate-y-1/2">
+  <CollectionList items={data.collections} />
+</div>
 
-      {/* right: nav buttons */}
-      <div className="absolute right-6 top-1/2 z-10 flex -translate-y-1/2 flex-col gap-3 md:right-10">
-        <Link
-          href={data.button1Link}
-          className="bg-accent px-5 py-3 text-center text-sm font-bold uppercase text-white hover:opacity-90"
-        >
-          {data.button1}
-        </Link>
-      </div>
+{/* right: nav buttons */}
+<div className="absolute bottom-8 right-6 z-10 flex flex-col gap-3 md:bottom-auto md:right-10 md:top-1/2 md:-translate-y-1/2">
+  <Link
+    href={data.button1Link}
+    className="bg-accent px-5 py-3 text-center text-sm font-bold uppercase text-white hover:opacity-90"
+  >
+    {data.button1}
+  </Link>
+</div>
     </section>
   );
 };

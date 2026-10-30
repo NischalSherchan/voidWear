@@ -70,7 +70,7 @@ export default function CollectionList({ items }: { items: string[] }) {
               type="button"
               onClick={() => setActive(i)}
               aria-current={isActive}
-              className={`block origin-left text-left leading-tight transition-all duration-300 ${
+              className={`block cursor-pointer origin-left text-left leading-tight transition-all duration-300 hover:text-[#e8843c] ${
                 isActive
                   ? "scale-110 text-3xl font-extrabold opacity-100 md:text-4xl"
                   : distance === 1
