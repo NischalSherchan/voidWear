@@ -15,6 +15,14 @@
     var(--hero-mid) 45%,
     var(--hero-edge) 100%
   );
+
+   --shelf-center: #ece6dc;
+  --shelf-edge: #cfc6b8;
+  --shelf-gradient: radial-gradient(
+    ellipse at 50% 35%,
+    var(--shelf-center) 0%,
+    var(--shelf-edge) 100%
+  );
 }
 
 @theme inline {
