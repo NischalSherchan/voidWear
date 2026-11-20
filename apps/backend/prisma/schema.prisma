@@ -23,41 +23,37 @@ model Product {
 }
 
 model Collection {
-  id        String   @id @default(cuid())
-  name      String   @unique
-  slug      String   @unique
-  isActive  Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
+  id         String      @id @default(cuid())
+  name       String      @unique
+  slug       String      @unique
+  isActive   Boolean     @default(true)
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
   heroSlides HeroSlide[]
 
   @@map("collection")
 }
 
-enum MediaType {
-  IMAGE
-  VIDEO
-}
-
 model HeroSlide {
   id           String     @id @default(cuid())
   collectionId String
+  type         MediaType  @default(IMAGE)
+  url          String
+  publicId     String     @unique
+  alt          String     @default("")
+  width        Int?
+  height       Int?
+  format       String?
+  order        Int        @default(0)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
   collection   Collection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
-
-  type     MediaType @default(IMAGE)
-  url      String
-  publicId String    @unique
-  alt      String    @default("")
-  width    Int?
-  height   Int?
-  format   String?
-
-  order Int @default(0)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 
   @@index([collectionId, order])
   @@map("hero_slides")
+}
+
+enum MediaType {
+  IMAGE
+  VIDEO
 }
